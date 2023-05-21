@@ -1,0 +1,29 @@
+version 3
+run General-0-20221112-12:51:43-11920
+attr configname General
+attr datetime 20221112-12:51:43
+attr datetimef 20221112-125143
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network application_layer
+attr processid 11920
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network application_layer
+
+par application_layer.Core typename "\"autonomous_intersection_management_system.application_layer.Core_Processor\""
+par application_layer.Message_SendingModule typename "\"autonomous_intersection_management_system.application_layer.Message_Processor\""
+par application_layer.VideoProcessor typename "\"autonomous_intersection_management_system.application_layer.Video_Processor\""
+par application_layer.OCRModule typename "\"autonomous_intersection_management_system.application_layer.OCR_Module\""
+par application_layer.Request_Receptor typename "\"autonomous_intersection_management_system.application_layer.Request_Receptor_Module\""
+par application_layer.Agent_with_IoT typename "\"autonomous_intersection_management_system.application_layer.Agent_with_IoT_Module\""
+par application_layer.SmartCity typename "\"autonomous_intersection_management_system.application_layer.Smart_City_Management_System\""
+par application_layer typename "\"autonomous_intersection_management_system.application_layer\""
+

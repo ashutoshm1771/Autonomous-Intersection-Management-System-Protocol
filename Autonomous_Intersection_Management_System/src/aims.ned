@@ -87,7 +87,7 @@ network application_layer
         Core: Core_Processor {
             @display("p=455,161");
         }
-        Message: Message_Processor {
+        Message_SendingModule: Message_Processor {
             @display("p=276,311");
         }
         VideoProcessor: Video_Processor {
@@ -106,8 +106,8 @@ network application_layer
             @display("p=455,34");
         }
     connections:
-        Core.output_gate_message --> Message.input_gate_core;
-        Message.output_gate_core --> Core.input_gate_message;
+        Core.output_gate_message --> Message_SendingModule.input_gate_core;
+        Message_SendingModule.output_gate_core --> Core.input_gate_message;
 
         Core.output_gate_ocr --> OCRModule.input_gate_core;
         OCRModule.output_gate_core --> Core.input_gate_ocr;
@@ -121,8 +121,8 @@ network application_layer
         Agent_with_IoT.output_gate_request --> Request_Receptor.input_gate_agent;
         Request_Receptor.output_gate_agent --> Agent_with_IoT.input_gate_request;
 
-		Agent_with_IoT.output_gate_message --> Message.input_gate_agent;
-        Message.output_gate_agent --> Agent_with_IoT.input_gate_message;
+		Agent_with_IoT.output_gate_message --> Message_SendingModule.input_gate_agent;
+        Message_SendingModule.output_gate_agent --> Agent_with_IoT.input_gate_message;
 
         Core.output_gate_smart_city --> SmartCity.input_gate_core;
         SmartCity.output_gate_core --> Core.input_gate_smart_city;

@@ -72,10 +72,10 @@ Define_Module(Smart_City_Management_System);
 void Core_Processor::initialize()
 {
     if (strcmp("Core", getName()) == 0) {
-        cMessage *msg = new cMessage("Core to Message");
+        cMessage *msg = new cMessage("Core to Message_SEnding_moduel for instructions");
         send(msg, "output_gate_message");
 
-        cMessage *msg2 = new cMessage("Core to Smart!!");
+        cMessage *msg2 = new cMessage("Core to SmartCity for status!!");
         send(msg2, "output_gate_smart_city");
     }
 }
